@@ -166,7 +166,7 @@ The installer copies `peon-ping.ts` to `~/.config/opencode/plugins/` and creates
 
 - **Sound playback** via `afplay` (macOS), `pw-play`/`paplay`/`ffplay` (Linux) — same priority chain as the shell hook
 - **CESP event mapping** — `session.created` / `session.idle` / `session.error` / `permission.asked` / rapid prompt detection all map to standard CESP categories
-- **Desktop notifications** — rich notifications via [`terminal-notifier`](https://github.com/julienXX/terminal-notifier) when available (subtitle, per-project grouping), with `osascript` fallback. Fires only when the terminal is not focused.
+- **Desktop notifications** — rich notifications via [`terminal-notifier`](https://github.com/julienXX/terminal-notifier) when available (subtitle, per-project grouping), with `osascript` fallback. Fires only when the terminal is not focused. (Planning to migrate to [jamf/Notifier](https://github.com/jamf/Notifier) which uses the modern `UserNotifications` API.)
 - **Terminal focus detection** — checks if your terminal app (Terminal, iTerm2, Warp, Alacritty, kitty, WezTerm, ghostty, Hyper) is frontmost via AppleScript before sending notifications
 - **Tab titles** — updates the terminal tab to show task status (`● project: working...` / `✓ project: done` / `✗ project: error`)
 - **Pack switching** — reads `active_pack` from config, loads the pack's `openpeon.json` manifest at runtime
